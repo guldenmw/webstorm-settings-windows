@@ -16,6 +16,12 @@
   <action id="Resume">
     <keyboard-shortcut first-keystroke="meta alt r" />
   </action>
+  <action id="SplitHorizontally">
+    <keyboard-shortcut first-keystroke="shift meta back_slash" />
+  </action>
+  <action id="SplitVertically">
+    <keyboard-shortcut first-keystroke="meta back_slash" />
+  </action>
   <action id="StringManipulation.Sort">
     <keyboard-shortcut first-keystroke="f9" />
   </action>
