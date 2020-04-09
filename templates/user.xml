@@ -63,4 +63,11 @@
       <option name="TS_STATEMENT" value="true" />
     </context>
   </template>
+  <template name="logvar" value="console.log('$VARSTRING$: ', $VAR$);" description="Log a variable to console" toReformat="false" toShortenFQNames="true">
+    <variable name="VAR" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="VARSTRING" expression="" defaultValue="VAR" alwaysStopAt="false" />
+    <context>
+      <option name="TS_STATEMENT" value="true" />
+    </context>
+  </template>
 </templateSet>
