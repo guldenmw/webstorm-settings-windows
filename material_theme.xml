@@ -1,5 +1,7 @@
 <application>
   <component name="MaterialThemeConfig">
+    <option name="contrastMode" value="true" />
+    <option name="styledDirectories" value="true" />
     <option name="allowDataCollection" value="true" />
     <option name="compactSidebar" value="true" />
     <option name="isContrastMode" value="true" />
@@ -8,9 +10,10 @@
     <option name="pristineConfig" value="false" />
     <option name="customSidebarHeight" value="22" />
     <option name="tabsHeight" value="30" />
-    <option name="accentColor" value="009688" />
+    <option name="accentColor" value="416a9b" />
     <option name="highlightColor" value="80cbc4" />
+    <option name="selectedTheme" value="NATIVE" />
     <option name="userId" value="-2d3801ff:166d8e8f4fb:-8000" />
-    <option name="version" value="4.11.5" />
+    <option name="version" value="5.2.0" />
   </component>
 </application>
