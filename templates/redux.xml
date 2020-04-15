@@ -7,15 +7,6 @@
       <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
-  <template name="reducer" value="const initialState = {$END$};&#10;&#10;export const $REDUCER$ = (state = initialState, action) =&gt; {&#10;  switch (action.type) {&#10;    case $ACTION_TYPE$:&#10;      return $PAYLOAD$;&#10;    default:&#10;      return state;&#10;  }&#10;};" description="Redux Reducer" toReformat="true" toShortenFQNames="true">
-    <variable name="REDUCER" expression="" defaultValue="" alwaysStopAt="true" />
-    <variable name="ACTION_TYPE" expression="complete()" defaultValue="" alwaysStopAt="true" />
-    <variable name="PAYLOAD" expression="" defaultValue="action.payload" alwaysStopAt="true" />
-    <context>
-      <option name="JSX_HTML" value="true" />
-      <option name="JS_STATEMENT" value="true" />
-    </context>
-  </template>
   <template name="reducertest" value="test('$REDUCER_STRING$ reducer $ACTION_STRING$ action', () =&gt; {&#10;  let previousState = $PREVIOUS_STATE$;&#10;  let actionToTest = $ACTION$($PARAMS$);&#10;  let expectedState = $EXPECTED_STATE$;&#10;  expect($REDUCER$(previousState, actionToTest)).toEqual(expectedState);&#10;});" description="Redux Reducer test" toReformat="true" toShortenFQNames="true">
     <variable name="PREVIOUS_STATE" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="ACTION" expression="complete()" defaultValue="" alwaysStopAt="true" />
