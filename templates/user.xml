@@ -55,7 +55,7 @@
       <option name="TS_STATEMENT" value="true" />
     </context>
   </template>
-  <template name="test" value="describe('$MODULE_BEING_TESTED$', () =&gt; {&#10;  it('$TEST_EXPECTATION$', () =&gt; {&#10;    const testData = '';&#10;    const expectedResponse = '';&#10;&#10;    expect($FUNCTION$(testData$END$)).toEqual(expectedResponse);&#10;  });&#10;});" description="Jest test boilerplate" toReformat="false" toShortenFQNames="true">
+  <template name="test" value="describe('$MODULE_BEING_TESTED$', () =&gt; {&#10;  it('should $TEST_EXPECTATION$', () =&gt; {&#10;    const testData = '';&#10;    const expectedResponse = '';&#10;&#10;    expect($FUNCTION$(testData$END$)).toEqual(expectedResponse);&#10;  });&#10;});" description="Jest test boilerplate" toReformat="false" toShortenFQNames="true">
     <variable name="MODULE_BEING_TESTED" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="TEST_EXPECTATION" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="FUNCTION" expression="" defaultValue="" alwaysStopAt="true" />
