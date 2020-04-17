@@ -89,4 +89,12 @@
       <option name="TS_STATEMENT" value="true" />
     </context>
   </template>
+  <template name="select" value="import { IApplicationState } from '~/core/reducer';&#10;import { get } from 'lodash';&#10;&#10;&#10;export const $SELECTORNAME$ = (state: IApplicationState) =&gt; {&#10;  state.$PATH$;&#10;  return get(state, '$COPIEDPATH$', []);&#10;};&#10;" description="Create new selector" toReformat="false" toShortenFQNames="true">
+    <variable name="SELECTORNAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PATH" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="COPIEDPATH" expression="" defaultValue="PATH" alwaysStopAt="false" />
+    <context>
+      <option name="TS_STATEMENT" value="true" />
+    </context>
+  </template>
 </templateSet>
