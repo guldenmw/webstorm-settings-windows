@@ -1,0 +1,5 @@
+<templateSet group="React">
+  <template name="disp" value="export const mapDispatchToProps = dispatch =&gt; ({&#10; $END$&#10;});&#10;" description="Adds the redux mapDispatchToProps function" toReformat="true" toShortenFQNames="true">
+    <context />
+  </template>
+</templateSet>
