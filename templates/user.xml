@@ -97,4 +97,11 @@
       <option name="TS_STATEMENT" value="true" />
     </context>
   </template>
+  <template name="memo" value="const $NAME$ = useMemo(() =&gt; {&#10;  $END$&#10;}, [$DEPS$]);" description="Create a useMemo function" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="DEPS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="TS_STATEMENT" value="true" />
+    </context>
+  </template>
 </templateSet>
