@@ -104,9 +104,8 @@
       <option name="TS_STATEMENT" value="true" />
     </context>
   </template>
-  <template name="mps" value="export const mapStateToProps = (state: IApplicationState) =&gt; {&#10;  const $RESULT$ = get$SELECTOR$(state);&#10;&#10;  return {&#10;    $RESULT$;&#10;  }&#10;};" description="mapStateToProps boilerplate" toReformat="false" toShortenFQNames="true">
+  <template name="mstp" value="export const mapStateToProps = (state: IApplicationState) =&gt; {&#10;  const $RESULT$ = $END$(state);&#10;&#10;  return {&#10;    $RESULT$,&#10;  };&#10;};" description="mapStateToProps boilerplate" toReformat="false" toShortenFQNames="true">
     <variable name="RESULT" expression="" defaultValue="" alwaysStopAt="true" />
-    <variable name="SELECTOR" expression="jsSuggestVariableName()" defaultValue="" alwaysStopAt="false" />
     <context>
       <option name="TS_STATEMENT" value="true" />
     </context>
