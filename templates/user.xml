@@ -110,4 +110,12 @@
       <option name="TS_STATEMENT" value="true" />
     </context>
   </template>
+  <template name="ust" value="const [$VAR$, set$CAPVAR$]: [$TYPE$, (...args) =&gt; any] = useState($END$);" description="React useState Hook" toReformat="false" toShortenFQNames="true">
+    <variable name="VAR" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="CAPVAR" expression="capitalize(VAR)" defaultValue="" alwaysStopAt="false" />
+    <variable name="TYPE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="TS_STATEMENT" value="true" />
+    </context>
+  </template>
 </templateSet>
