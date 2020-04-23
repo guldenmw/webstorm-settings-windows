@@ -1,5 +1,5 @@
 <templateSet group="redux">
-  <template name="action" value="export const $ACTION$ = '$END$/$KEBAB$';&#10;&#10;export const $CAMEL$ = data =&gt; ({&#10;  type: $ACTION$, data,&#10;});" description="Redux Action" toReformat="false" toShortenFQNames="true">
+  <template name="action" value="export const $ACTION$ = '$END$/$KEBAB$';&#10;&#10;&#10;export const $CAMEL$ = data =&gt; ({&#10;  type: $ACTION$, data,&#10;});" description="Redux Action" toReformat="false" toShortenFQNames="true">
     <variable name="ACTION" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="KEBAB" expression="lowercaseAndDash(ACTION)" defaultValue="" alwaysStopAt="false" />
     <variable name="CAMEL" expression="camelCase(ACTION)" defaultValue="" alwaysStopAt="false" />
