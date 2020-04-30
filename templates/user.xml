@@ -68,7 +68,7 @@
     <variable name="VAR" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="VARSTRING" expression="" defaultValue="VAR" alwaysStopAt="false" />
     <context>
-      <option name="TS_STATEMENT" value="true" />
+      <option name="ES6_STATEMENT" value="true" />
     </context>
   </template>
   <template name="callback" value="const $NAME$ = useCallback(() =&gt; {&#10;  $END$&#10;}, [$DEPS$]);" description="Create a useCallback function" toReformat="false" toShortenFQNames="true">
