@@ -69,24 +69,28 @@
     <variable name="VARSTRING" expression="" defaultValue="VAR" alwaysStopAt="false" />
     <context>
       <option name="ES6_STATEMENT" value="true" />
+      <option name="TS_STATEMENT" value="true" />
     </context>
   </template>
   <template name="callback" value="const $NAME$ = useCallback(() =&gt; {&#10;  $END$&#10;}, [$DEPS$]);" description="Create a useCallback function" toReformat="false" toShortenFQNames="true">
     <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="DEPS" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
+      <option name="ES6_STATEMENT" value="true" />
       <option name="TS_STATEMENT" value="true" />
     </context>
   </template>
   <template name="effect" value="useEffect(() =&gt; {&#10;  $END$&#10;}, [$DEPS$]);" description="Create a useEffect function" toReformat="false" toShortenFQNames="true">
     <variable name="DEPS" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
+      <option name="ES6_STATEMENT" value="true" />
       <option name="TS_STATEMENT" value="true" />
     </context>
   </template>
   <template name="debug" value="console.log('--debug: $MESSAGE$');" description="Log a debug message to console" toReformat="false" toShortenFQNames="true">
     <variable name="MESSAGE" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
+      <option name="ES6_STATEMENT" value="true" />
       <option name="TS_STATEMENT" value="true" />
     </context>
   </template>
@@ -102,6 +106,7 @@
     <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="DEPS" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
+      <option name="ES6_STATEMENT" value="true" />
       <option name="TS_STATEMENT" value="true" />
     </context>
   </template>
