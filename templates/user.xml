@@ -91,6 +91,7 @@
     <variable name="MESSAGE" expression="" defaultValue="" alwaysStopAt="true" />
     <context>
       <option name="ES6_STATEMENT" value="true" />
+      <option name="TS_CLASS" value="true" />
       <option name="TS_STATEMENT" value="true" />
     </context>
   </template>
