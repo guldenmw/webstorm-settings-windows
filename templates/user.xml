@@ -129,6 +129,7 @@
     <variable name="CAPVAR" expression="capitalize(VAR)" defaultValue="" alwaysStopAt="false" />
     <context>
       <option name="ES6_STATEMENT" value="true" />
+      <option name="TS_STATEMENT" value="true" />
     </context>
   </template>
 </templateSet>
