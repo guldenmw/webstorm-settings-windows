@@ -1,12 +1,4 @@
 <templateSet group="redux">
-  <template name="action" value="export const $ACTION$ = '$END$/$KEBAB$';&#10;&#10;&#10;export const $CAMEL$ = data =&gt; ({&#10;  type: $ACTION$, data,&#10;});" description="Redux Action" toReformat="false" toShortenFQNames="true">
-    <variable name="ACTION" expression="" defaultValue="" alwaysStopAt="true" />
-    <variable name="KEBAB" expression="lowercaseAndDash(ACTION)" defaultValue="" alwaysStopAt="false" />
-    <variable name="CAMEL" expression="camelCase(ACTION)" defaultValue="" alwaysStopAt="false" />
-    <context>
-      <option name="JAVA_SCRIPT" value="true" />
-    </context>
-  </template>
   <template name="reducertest" value="test('$REDUCER_STRING$ reducer $ACTION_STRING$ action', () =&gt; {&#10;  let previousState = $PREVIOUS_STATE$;&#10;  let actionToTest = $ACTION$($PARAMS$);&#10;  let expectedState = $EXPECTED_STATE$;&#10;  expect($REDUCER$(previousState, actionToTest)).toEqual(expectedState);&#10;});" description="Redux Reducer test" toReformat="true" toShortenFQNames="true">
     <variable name="PREVIOUS_STATE" expression="" defaultValue="" alwaysStopAt="true" />
     <variable name="ACTION" expression="complete()" defaultValue="" alwaysStopAt="true" />
@@ -28,6 +20,13 @@
     <context>
       <option name="JSX_HTML" value="true" />
       <option name="JS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="act" value="export const $ACTION$ = '$KEBAB$';&#10;" description="React Action" toReformat="false" toShortenFQNames="true">
+    <variable name="ACTION" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="KEBAB" expression="lowercaseAndDash(ACTION)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
     </context>
   </template>
 </templateSet>
