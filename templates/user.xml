@@ -1,0 +1,158 @@
+<templateSet group="user">
+  <template name="rccp" value="import React, { Component } from 'react';&#10;&#10;interface IProps {&#10;  [x: string]: any;&#10;}&#10;&#10;interface IState {&#10;  [x: string]: any;&#10;}&#10;&#10;export default class ComponentName extends Component&lt;IProps, IState&gt; {&#10;  state = {};&#10;&#10;  constructor(props) {&#10;    super(props);&#10;  }&#10;&#10;  render() {&#10;    return (&#10;      &lt;div&gt;&#10;&#10;      &lt;/div&gt;&#10;    );&#10;  }&#10;}" description="React Typescript class component template" toReformat="true" toShortenFQNames="true">
+    <context>
+      <option name="TS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="styled" value="import styled from 'styled-components';&#10;&#10;&#10;export const $STYLEDVAR$ = styled.div&lt;any&gt;`&#10;&#10;`;&#10;" description="Typescript Styled Component Template" toReformat="false" toShortenFQNames="true">
+    <variable name="STYLEDVAR" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="TS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="container" value="import { IApplicationState } from '~/core/reducer';&#10;&#10;export const mapStateToProps = (state: IApplicationState) =&gt; {&#10;  const {&#10;&#10;  } = state;&#10;&#10;  return {};&#10;};&#10;&#10;export const mapDispatchToProps = dispatch =&gt; ({&#10;  someFunction(data) {&#10;    dispatch(someFunction(data));&#10;  },&#10;});&#10;" description="Redux typescript container boilerplate" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="TS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="sfc" value="import React, { FC } from 'react';&#10;&#10;interface IProps {&#10;  [x: string]: any;&#10;}&#10;&#10;const $COMPONENT_NAME$: FC&lt;IProps&gt; = (props) =&gt; {&#10;  const { $END$ } = props;&#10;  return (&#10;    &lt;div&gt;&#10;&#10;    &lt;/div&gt;&#10;  );&#10;};&#10;&#10;$COMPONENT_NAME$.defaultProps = {};&#10;&#10;export default $COMPONENT_NAME$;&#10;" description="React Stateless Component" toReformat="false" toShortenFQNames="true">
+    <variable name="COMPONENT_NAME" expression="" defaultValue="ComponentName" alwaysStopAt="true" />
+    <context>
+      <option name="TS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="sfac" value="import React, { useState, useEffect, FC } from 'react';&#10;&#10;interface IComponentProps {&#10;  [x: string]: any;&#10;}&#10;&#10;interface IContainerProps {&#10;  token?: string;&#10;}&#10;&#10;type IProps = IComponentProps &amp; IContainerProps;&#10;&#10;const $COMPONENT_NAME$: FC&lt;IProps&gt; = (props) =&gt; {&#10;  const { } = props;&#10;  &#10;  $END$&#10;&#10;  const [isLoading, setLoadingState] = useState(false);&#10;  const [hasError, setErrorState] = useState(false);&#10;&#10;  useEffect(() =&gt; {&#10;    async function run() {&#10;      const { token } = props;&#10;      try {&#10;        setLoadingState(true);&#10;        /* Run async actions here */&#10;        setLoadingState(false);&#10;      } catch (ex) {&#10;        console.log('Error fetching data: ', ex);&#10;        setLoadingState(false);&#10;        setErrorState(true);&#10;      }&#10;    }&#10;    run();&#10;  }, []);&#10;&#10;  if (isLoading) {&#10;    return (&lt;div&gt;Loading...&lt;/div&gt;);&#10;  }&#10;&#10;  if (hasError) {&#10;    return &lt;div&gt;An error has occurred!&lt;/div&gt;;&#10;  }&#10;&#10;  return (&#10;    &lt;div&gt;&#10;&#10;    &lt;/div&gt;&#10;  );&#10;};&#10;&#10;$COMPONENT_NAME$.defaultProps = {&#10;  palette: 'primary',&#10;  token: '',&#10;};&#10;&#10;export default $COMPONENT_NAME$;&#10;" description="Stateless Functional Async Component" toReformat="false" toShortenFQNames="true">
+    <variable name="COMPONENT_NAME" expression="" defaultValue="ComponentName" alwaysStopAt="true" />
+    <context>
+      <option name="TS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="component" value="import React, { useState, FunctionComponent } from 'react';&#10;&#10;interface IProps {&#10;  palette?: string;&#10;}&#10;&#10;interface IState {&#10;  [x: string]: any;&#10;}&#10;&#10;const MyComponent: FunctionComponent&lt;IProps&gt; = (props) =&gt; {&#10;  const [state, setState]: [IState, (...args) =&gt; any] = useState({});&#10;&#10;  const {} = props;&#10;&#10;  return (&#10;    &lt;div&gt;&#10;&#10;    &lt;/div&gt;&#10;  );&#10;};&#10;&#10;MyComponent.defaultProps = {&#10;  palette: 'primary',&#10;}&#10;&#10;export default MyComponent;" description="React hooks functional component" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="TS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="hook:state" value="const [state, setState]: [IState, (...args) =&gt; any] = useState({&#10;  &#10;});" description="" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="TS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="saga" value="import { call, put, select, takeLatest } from 'redux-saga/effects';$END$&#10;&#10;function* sagaWorker(action) {&#10;  try {&#10;    const { data } = action;&#10;    return yield put(() =&gt; {});&#10;  } catch (ex) {&#10;    console.error(ex);&#10;    return yield put(() =&gt; {});&#10;  }&#10;}&#10;&#10;function* $NAME$ () {&#10;  yield takeLatest(['ACTION_NAME'], sagaWorker);&#10;}&#10;&#10;export default $NAME$;&#10;" description="" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="TS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="api" value="import { generateOptions } from '~/apis';&#10;import { handleResponse } from '~/shared/helpers';&#10;&#10;const { API_BASE_PATH } = process.env;&#10;&#10;const $NAME$ = async (token: string) =&gt; {&#10;  const url = `${API_BASE_PATH}/`;&#10;  const options = generateOptions(token);&#10;  const response = await fetch(url, options);&#10;  handleResponse(response);&#10;  return await response.json();&#10;};&#10;&#10;export default $NAME$;&#10;" description="API request boilerplate" toReformat="true" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="apiRequest" alwaysStopAt="true" />
+    <context>
+      <option name="TS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="reducer" value="// import {&#10;&#10;// } from '../actions';&#10;&#10;export interface I$BIG_REDUCER_NAME$State {&#10;  [x: string]: any;&#10;}&#10;&#10;const initialState: I$BIG_REDUCER_NAME$State = {};&#10;&#10;const $REDUCER_NAME$ = (state = initialState, action): I$BIG_REDUCER_NAME$State =&gt; {&#10;  const { type, data } = action;&#10;  switch (type) {&#10;    default:&#10;      return state;&#10;  }&#10;};&#10;&#10;export default $REDUCER_NAME$;&#10;" description="redux reducer" toReformat="false" toShortenFQNames="true">
+    <variable name="REDUCER_NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="BIG_REDUCER_NAME" expression="capitalize(String)" defaultValue="capitalize(REDUCER_NAME)" alwaysStopAt="false" />
+    <context>
+      <option name="TS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="test" value="describe('$MODULE_BEING_TESTED$', () =&gt; {&#10;  it('should $TEST_EXPECTATION$', () =&gt; {&#10;    const testData = '';&#10;    const expectedResponse = '';&#10;&#10;    expect($FUNCTION$(testData$END$)).toEqual(expectedResponse);&#10;  });&#10;});" description="Jest test boilerplate" toReformat="false" toShortenFQNames="true">
+    <variable name="MODULE_BEING_TESTED" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="TEST_EXPECTATION" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="FUNCTION" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="ES6_STATEMENT" value="true" />
+      <option name="TS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="vlog" value="console.log('$VARSTRING$: ', $VAR$);" description="Log a variable to console" toReformat="false" toShortenFQNames="true">
+    <variable name="VAR" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="VARSTRING" expression="" defaultValue="VAR" alwaysStopAt="false" />
+    <context>
+      <option name="ES6_STATEMENT" value="true" />
+      <option name="TS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="callback" value="const $NAME$ = useCallback(() =&gt; {&#10;  $END$&#10;}, [$DEPS$]);" description="Create a useCallback function" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="DEPS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="ES6_STATEMENT" value="true" />
+      <option name="TS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="effect" value="useEffect(() =&gt; {&#10;  $END$&#10;}, [$DEPS$]);" description="Create a useEffect function" toReformat="false" toShortenFQNames="true">
+    <variable name="DEPS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="ES6_STATEMENT" value="true" />
+      <option name="TS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="debug" value="console.log('--debug: $MESSAGE$');" description="Log a debug message to console" toReformat="false" toShortenFQNames="true">
+    <variable name="MESSAGE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="ES6_STATEMENT" value="true" />
+      <option name="TS_CLASS" value="true" />
+      <option name="TS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="select" value="import { IApplicationState } from '~/core/reducer';&#10;import { get } from 'lodash';&#10;&#10;&#10;export const $SELECTORNAME$ = (state: IApplicationState) =&gt; {&#10;  state.$PATH$;&#10;  return get(state, '$COPIEDPATH$', []);&#10;};&#10;" description="Create new selector" toReformat="false" toShortenFQNames="true">
+    <variable name="SELECTORNAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="PATH" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="COPIEDPATH" expression="" defaultValue="PATH" alwaysStopAt="false" />
+    <context>
+      <option name="TS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="memo" value="const $NAME$ = useMemo(() =&gt; {&#10;  $END$&#10;}, [$DEPS$]);" description="Create a useMemo function" toReformat="false" toShortenFQNames="true">
+    <variable name="NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="DEPS" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="ES6_STATEMENT" value="true" />
+      <option name="TS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="mstp" value="export const mapStateToProps = (state: IApplicationState) =&gt; {&#10;  const $RESULT$ = $END$(state);&#10;&#10;  return {&#10;    $RESULT$,&#10;  };&#10;};" description="mapStateToProps boilerplate" toReformat="false" toShortenFQNames="true">
+    <variable name="RESULT" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="TS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="ustt" value="const [$VAR$, set$CAPVAR$] = useState&lt;$TYPE$&gt;($END$);" description="React useState Hook" toReformat="false" toShortenFQNames="true">
+    <variable name="VAR" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="CAPVAR" expression="capitalize(VAR)" defaultValue="" alwaysStopAt="false" />
+    <variable name="TYPE" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="TS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="ust" value="const [$VAR$, set$CAPVAR$] = useState($END$);" description="React useState Hook" toReformat="false" toShortenFQNames="true">
+    <variable name="VAR" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="CAPVAR" expression="capitalize(VAR)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="ES6_STATEMENT" value="true" />
+      <option name="TS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="muisth" value="import { makeStyles, Theme } from '@material-ui/core/styles';&#10;&#10;export const useStyles = makeStyles((theme: Theme) =&gt; ({&#10;  $VAR$: {&#10;    $END$,&#10;  }&#10;}))&#10;" description="Material UI Make Styles container with theme propr" toReformat="false" toShortenFQNames="true">
+    <variable name="VAR" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="ES6_STATEMENT" value="true" />
+      <option name="TS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="muis" value="import { makeStyles } from '@material-ui/core/styles';&#10;&#10;export const useStyles = makeStyles({&#10;  $VAR$: {&#10;    $END$,&#10;  }&#10;})&#10;" description="Material UI Make Styles container" toReformat="false" toShortenFQNames="true">
+    <variable name="VAR" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="ES6_STATEMENT" value="true" />
+      <option name="TS_STATEMENT" value="true" />
+    </context>
+  </template>
+  <template name="act" value="export const $ACTION$ = '$KEBAB$';&#10;" description="React Action" toReformat="false" toShortenFQNames="true">
+    <variable name="ACTION" expression="" defaultValue="" alwaysStopAt="true" />
+    <variable name="KEBAB" expression="lowercaseAndDash(ACTION)" defaultValue="" alwaysStopAt="false" />
+    <context>
+      <option name="JAVA_SCRIPT" value="true" />
+    </context>
+  </template>
+</templateSet>
